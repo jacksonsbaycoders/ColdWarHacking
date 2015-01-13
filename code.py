@@ -2,6 +2,8 @@
 
 
 #code a simple message with a caeser cipher
+def decode(letter,shift):
+	return letter
 
 def encode(letter,shift):
 	code = ord(letter)
