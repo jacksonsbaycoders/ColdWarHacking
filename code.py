@@ -1,5 +1,5 @@
 
 #code a simple message with a caeser cipher
-message = "hello from git"
+message = "aAzZ"
 for e in message:
-	print ord(e),
+	print e,ord(e),
