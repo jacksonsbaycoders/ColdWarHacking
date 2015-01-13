@@ -3,12 +3,15 @@
 
 #code a simple message with a caeser cipher
 
-def encode(c):
-	t = c+1
-	t = t%96
-	return t
+def encode(letter,shift):
+	code = ord(letter)
+	code -= 97
+	code += shift
+	code = code % 26
+	code += 97
+	return chr(code)
 
 
-message = "aAzZ"
+message = "abcdefghijklmnopqrstuvwxyz"
 for e in message:
-	print e,ord(e)-97,
+	print encode(e,2),
