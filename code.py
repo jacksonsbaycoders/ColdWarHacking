@@ -3,7 +3,13 @@
 
 #code a simple message with a caeser cipher
 def decode(letter,shift):
-	return letter
+	code = ord(letter)
+	code -= 97
+	code -= shift
+	if code <0:
+		code +=26
+	code += 97
+	return chr(code)
 
 def encode(letter,shift):
 	code = ord(letter)
@@ -16,4 +22,4 @@ def encode(letter,shift):
 
 message = "abcdefghijklmnopqrstuvwxyz"
 for e in message:
-	print encode(e,2),
+	print decode(encode(e,2),2),
